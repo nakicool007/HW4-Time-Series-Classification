@@ -3,7 +3,7 @@
 **Name:** Nakul Kumbria  
 **GitHub:** nakicool007
 
-I used the AReM dataset to study time series classification. The notebook includes the feature extraction from Question 1 and my work on Question 2(a)(i) through (v), comparing bending with the other activities.
+I used the AReM dataset to study time series classification. The notebook includes the feature extraction from Question 1 and my work on Question 2(a)(i) through (vi), comparing bending with the other activities.
 
 ## Current work
 
@@ -14,6 +14,7 @@ I used the AReM dataset to study time series classification. The notebook includ
 - Adapt the professor's RFE example to unregularized logistic regression and use stratified 5-fold cross-validation to choose the number of segments and retained features.
 - Report the selected model's training confusion matrix, ROC, AUC, coefficients, and p-value limitations under complete separation.
 - Evaluate the same classifier on the 19 test instances and compare the test accuracy with cross-validation.
+- Explain how complete separation affects the unregularized coefficients and p-values.
 
 For Question 2(a)(iii), I compared all 8,820 pairs of segment and feature counts using mean balanced accuracy. The selected pair is **(l, p) = (1, 10)**, with 99.17% mean CV balanced accuracy and 98.57% mean CV ordinary accuracy. These are model-selection scores; the 19 test instances were kept out of the search.
 
