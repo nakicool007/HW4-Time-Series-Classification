@@ -3,7 +3,7 @@
 **Name:** Nakul Kumbria  
 **GitHub:** nakicool007
 
-I used the AReM dataset to study time series classification. The notebook includes the feature extraction from Question 1 and my work on Question 2(a)(i) through (vii), comparing bending with the other activities.
+I used the AReM dataset to study time series classification. The notebook includes the feature extraction from Question 1 and my work on Question 2(a)(i) through (vii) and Question 2(b)(i), comparing bending with the other activities.
 
 ## Current work
 
@@ -16,6 +16,7 @@ I used the AReM dataset to study time series classification. The notebook includ
 - Evaluate the same classifier on the 19 test instances and compare the test accuracy with cross-validation.
 - Explain how complete separation affects the unregularized coefficients and p-values.
 - Fit a balanced case-control sample and correct its intercept for the original training class proportion, then report its training and test confusion matrices, ROC, and AUC.
+- Jointly tune segmentation and L1 regularization using stratified 5-fold cross-validation, with scaling and feature selection inside the folds.
 
 For Question 2(a)(iii), I compared all 8,820 pairs of segment and feature counts using mean balanced accuracy. The selected pair is **(l, p) = (1, 10)**, with 99.17% mean CV balanced accuracy and 98.57% mean CV ordinary accuracy. These are model-selection scores; the 19 test instances were kept out of the search.
 
@@ -24,6 +25,8 @@ For Question 2(a)(iv), the selected model correctly classifies all 60 other-acti
 For Question 2(a)(v), the model correctly classifies all **19 test instances (100% accuracy)**, compared with 98.57% mean CV accuracy. I used the chosen l=1 and the same feature order, RFE mask, training-fitted scaler, model, and 0.5 cutoff. No model fitting or feature selection was done on the test set.
 
 For Question 2(a)(vii), I sampled 9 controls without replacement and kept all 9 bending cases (seed 42). I fitted a new unregularized model with the same 10 features and adjusted the intercept by log(9/60), approximately -1.8971. The adjusted model has 94.20% training accuracy, 94.74% test accuracy, and AUC 1.00 on both sets. It has 4 training false positives and 1 test false positive, with no false negatives. The correction uses the original training class proportion, not the test labels.
+
+For Question 2(b)(i), I searched 340 pairs of l and C using the same stratified folds and balanced-accuracy scoring. The selected pair is **l=12, C=31.6228**, with 97.50% mean CV balanced accuracy and 95.71% mean CV ordinary accuracy. The refitted L1 model keeps 170 of 504 coefficients nonzero. All 1,700 CV fits met the solver stopping criterion before the iteration limit. No test results were used in this search.
 
 ## Files
 
