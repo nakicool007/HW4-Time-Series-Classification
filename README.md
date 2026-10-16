@@ -26,7 +26,7 @@ For Question 2(a)(v), the model correctly classifies all **19 test instances (10
 
 For Question 2(a)(vii), I sampled 9 controls without replacement and kept all 9 bending cases (seed 42). I fitted a new unregularized model with the same 10 features and adjusted the intercept by log(9/60), approximately -1.8971. The adjusted model has 94.20% training accuracy, 94.74% test accuracy, and AUC 1.00 on both sets. It has 4 training false positives and 1 test false positive, with no false negatives. The correction uses the original training class proportion, not the test labels.
 
-For Question 2(b)(i), I searched 340 pairs of l and C using the same stratified folds and balanced-accuracy scoring. The selected pair is **l=12, C=31.6228**, with 97.50% mean CV balanced accuracy and 95.71% mean CV ordinary accuracy. The refitted L1 model keeps 170 of 504 coefficients nonzero. All 1,700 CV fits met the solver stopping criterion before the iteration limit. No test results were used in this search.
+For Question 2(b)(i), I used standardized features and the recommended Liblinear solver. I searched 340 pairs of l and C using stratified folds and balanced-accuracy scoring. The selected pair is **l=12, C=1**, with 95.00% mean CV balanced accuracy and 98.57% mean CV ordinary accuracy. The refitted L1 model keeps 5 of 504 coefficients nonzero. All 1,700 CV fits met the solver stopping criterion before the iteration limit. No test results were used in this search.
 
 ## Files
 
