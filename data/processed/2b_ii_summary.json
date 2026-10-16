@@ -1,0 +1,32 @@
+{
+  "models": [
+    {
+      "method": "Unregularized + RFE (part a)",
+      "mean_cv_accuracy": 0.9857142857142858,
+      "mean_cv_balanced_accuracy": 0.9916666666666666,
+      "test_accuracy": 1.0,
+      "test_balanced_accuracy": 1.0,
+      "selected_features": 10
+    },
+    {
+      "method": "L1 + Liblinear (part b)",
+      "mean_cv_accuracy": 0.9857142857142858,
+      "mean_cv_balanced_accuracy": 0.95,
+      "test_accuracy": 0.9473684210526315,
+      "test_balanced_accuracy": 0.875,
+      "selected_features": 5
+    }
+  ],
+  "l1_test_confusion_matrix": [
+    [
+      15,
+      0
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "test_threshold": 0.5,
+  "p_value_selection_status": "Not fitted; conventional p-values unreliable under complete separation"
+}
