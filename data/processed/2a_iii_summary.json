@@ -1,0 +1,38 @@
+{
+  "best_l": 1,
+  "best_p": 10,
+  "scoring": "balanced_accuracy",
+  "mean_cv_balanced_accuracy": 0.9916666666666666,
+  "mean_cv_accuracy": 0.9857142857142858,
+  "fold_balanced_accuracy": [
+    0.9583333333333333,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "fold_accuracy": [
+    0.9285714285714286,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "selected_features": [
+    "min_1_seg1",
+    "q3_1_seg1",
+    "max_2_seg1",
+    "q3_3_seg1",
+    "max_4_seg1",
+    "q1_4_seg1",
+    "min_5_seg1",
+    "max_5_seg1",
+    "mean_5_seg1",
+    "q1_6_seg1"
+  ],
+  "candidate_pairs": 8820,
+  "sklearn_version": "1.9.1",
+  "C": "infinity (unregularized)",
+  "seed": 42,
+  "training_instances": 69
+}

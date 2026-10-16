@@ -3,7 +3,7 @@
 **Name:** Nakul Kumbria  
 **GitHub:** nakicool007
 
-I used the AReM dataset to study time series classification. The notebook includes the feature extraction from Question 1 and my work on Question 2(a)(i) and (ii), comparing bending with the other activities.
+I used the AReM dataset to study time series classification. The notebook includes the feature extraction from Question 1 and my work on Question 2(a)(i) through (iii), comparing bending with the other activities.
 
 ## Current work
 
@@ -11,16 +11,17 @@ I used the AReM dataset to study time series classification. The notebook includ
 - Calculate standard deviations and 90% bootstrap confidence intervals for the features.
 - Plot mean, standard deviation, and maximum from series 1, 2, and 6 using only the training instances.
 - Split each series into two halves, extract the features again, and compare the scatter plots with the whole-series results.
+- Adapt the professor's RFE example to unregularized logistic regression and use stratified 5-fold cross-validation to choose the number of segments and retained features.
 
-The classification work so far covers exploratory plots. The logistic regression model has not been fitted yet.
+For Question 2(a)(iii), I compared all 8,820 pairs of segment and feature counts using mean balanced accuracy. The selected pair is **(l, p) = (1, 10)**, with 99.17% mean CV balanced accuracy and 98.57% mean CV ordinary accuracy. These are model-selection scores; the 19 test instances were kept out of the search.
 
 ## Files
 
 - `notebook/Kumbria_Nakul_HW4.ipynb`: code, saved plots, and written answers.
 - `data/AReM/`: original dataset.
 - `data/train/` and `data/test/`: activity folders containing the assignment's training and test splits.
-- `data/processed/`: extracted features, instance metadata, bootstrap results, and training features from the two halves.
-- `figures/`: saved scatterplot matrices for Question 2(a).
+- `data/processed/`: extracted features, instance metadata, bootstrap results, training features from the two halves, and RFE cross-validation results and feature rankings.
+- `figures/`: saved scatterplot matrices and the cross-validation model-selection plot for Question 2(a).
 - `requirements.txt`: Python dependencies.
 
 ## Dataset and split
@@ -33,7 +34,7 @@ Most instances have 480 observations. `sitting/dataset8.csv` has 479, so I kept 
 
 ## Running the notebook
 
-Use Python 3.10 or newer. From this folder, run:
+Use Python 3.11 or newer. From this folder, run:
 
 ```powershell
 python -m venv .venv
@@ -41,7 +42,7 @@ python -m venv .venv
 .venv\Scripts\python -m jupyterlab
 ```
 
-Open `notebook/Kumbria_Nakul_HW4.ipynb` and run the cells in order. The bootstrap uses 10,000 repetitions with seed 42 and may take some time. The notebook supports launching Jupyter from either the repository root or the notebook folder.
+Open `notebook/Kumbria_Nakul_HW4.ipynb` and run the cells in order. The bootstrap uses 10,000 repetitions with seed 42 and may take some time. The RFE search checks all feature counts for l=1 through 20 and uses five worker processes. The notebook supports launching Jupyter from either the repository root or the notebook folder.
 
 ## Dataset source
 
