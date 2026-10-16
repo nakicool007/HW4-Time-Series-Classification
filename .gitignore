@@ -1,0 +1,26 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local credentials
+.env
+.env.*
+
+# Keep the assignment notebook, source data, splits, and result CSVs tracked.
+
+# Archived Git metadata from the copied homework folder
+.git-hw3-backup/
+.github-repository-state.json
+setup_hw4_repository.py
