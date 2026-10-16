@@ -1,0 +1,26 @@
+{
+  "l": 1,
+  "p": 10,
+  "test_instances": 19,
+  "test_correct": 19,
+  "test_accuracy": 1.0,
+  "mean_cv_accuracy": 0.9857142857142858,
+  "test_minus_cv_accuracy_percentage_points": 1.4285714285714235,
+  "test_balanced_accuracy": 1.0,
+  "mean_cv_balanced_accuracy": 0.9916666666666666,
+  "test_confusion_matrix": [
+    [
+      15,
+      0
+    ],
+    [
+      0,
+      4
+    ]
+  ],
+  "class_order": [
+    "other activities",
+    "bending"
+  ],
+  "threshold": 0.5
+}

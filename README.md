@@ -3,7 +3,7 @@
 **Name:** Nakul Kumbria  
 **GitHub:** nakicool007
 
-I used the AReM dataset to study time series classification. The notebook includes the feature extraction from Question 1 and my work on Question 2(a)(i) through (iv), comparing bending with the other activities.
+I used the AReM dataset to study time series classification. The notebook includes the feature extraction from Question 1 and my work on Question 2(a)(i) through (v), comparing bending with the other activities.
 
 ## Current work
 
@@ -13,17 +13,20 @@ I used the AReM dataset to study time series classification. The notebook includ
 - Split each series into two halves, extract the features again, and compare the scatter plots with the whole-series results.
 - Adapt the professor's RFE example to unregularized logistic regression and use stratified 5-fold cross-validation to choose the number of segments and retained features.
 - Report the selected model's training confusion matrix, ROC, AUC, coefficients, and p-value limitations under complete separation.
+- Evaluate the same classifier on the 19 test instances and compare the test accuracy with cross-validation.
 
 For Question 2(a)(iii), I compared all 8,820 pairs of segment and feature counts using mean balanced accuracy. The selected pair is **(l, p) = (1, 10)**, with 99.17% mean CV balanced accuracy and 98.57% mean CV ordinary accuracy. These are model-selection scores; the 19 test instances were kept out of the search.
 
 For Question 2(a)(iv), the selected model correctly classifies all 60 other-activity and 9 bending training instances, with training AUC 1.00. The training classes are completely separable. I report the stopped-fit coefficients and numerical Wald diagnostics, but conventional MLE p-values are unavailable in this case. These training results are not a test-set evaluation.
+
+For Question 2(a)(v), the model correctly classifies all **19 test instances (100% accuracy)**, compared with 98.57% mean CV accuracy. I used the chosen l=1 and the same feature order, RFE mask, training-fitted scaler, model, and 0.5 cutoff. No model fitting or feature selection was done on the test set.
 
 ## Files
 
 - `notebook/Kumbria_Nakul_HW4.ipynb`: code, saved plots, and written answers.
 - `data/AReM/`: original dataset.
 - `data/train/` and `data/test/`: activity folders containing the assignment's training and test splits.
-- `data/processed/`: extracted features, instance metadata, bootstrap results, training features from the two halves, RFE results, and the training predictions and coefficient report.
+- `data/processed/`: extracted features, instance metadata, bootstrap results, training features from the two halves, RFE results, training and test predictions, and the coefficient report.
 - `figures/`: saved scatterplot matrices, the cross-validation model-selection plot, and the training confusion matrix and ROC for Question 2(a).
 - `requirements.txt`: Python dependencies.
 
