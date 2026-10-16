@@ -1,0 +1,12 @@
+parameter,beta_standardized,beta_original_units,nominal_se_original_units,nominal_Wald_p_at_stopped_fit,valid_MLE_p_value,inference_note
+Intercept,-12.037936053555804,-12.74366720528846,210.9864792230996,0.9518367421040324,N/A,Complete separation; nominal Wald p is not valid
+min_1_seg1,-2.4317840650079776,-0.27854417082581867,7.256148987830001,0.9693788643697897,N/A,Complete separation; nominal Wald p is not valid
+q3_1_seg1,-2.4551546265806414,-0.5169993339724989,9.895967614161904,0.9583347245933495,N/A,Complete separation; nominal Wald p is not valid
+max_2_seg1,-1.8217740284573418,-0.3564835023154052,10.486195724109203,0.9728807364030038,N/A,Complete separation; nominal Wald p is not valid
+q3_3_seg1,-2.0074060240744873,-0.5124431137428367,8.274178084891718,0.9506163376427705,N/A,Complete separation; nominal Wald p is not valid
+max_4_seg1,2.533163081424725,1.1082837535436572,22.075147391843966,0.9599589918259446,N/A,Complete separation; nominal Wald p is not valid
+q1_4_seg1,-3.0586216160288315,-3.6558314057993337,100.4045961766444,0.9709546460093154,N/A,Complete separation; nominal Wald p is not valid
+min_5_seg1,5.105711464916673,0.9579663891079733,11.48365099456504,0.9335175707861791,N/A,Complete separation; nominal Wald p is not valid
+max_5_seg1,5.720229972342911,1.0573259680442855,5.789278847286366,0.8550842811412834,N/A,Complete separation; nominal Wald p is not valid
+mean_5_seg1,3.3945283757256783,0.6677840572486052,16.658409332531317,0.9680238424304478,N/A,Complete separation; nominal Wald p is not valid
+q1_6_seg1,-3.0029757295467694,-3.9070602943695456,127.80268075163556,0.9756116416456319,N/A,Complete separation; nominal Wald p is not valid

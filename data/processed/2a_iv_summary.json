@@ -1,0 +1,28 @@
+{
+  "l": 1,
+  "p": 10,
+  "training_instances": 69,
+  "class_order": [
+    "other activities",
+    "bending"
+  ],
+  "threshold": 0.5,
+  "training_confusion_matrix": [
+    [
+      60,
+      0
+    ],
+    [
+      0,
+      9
+    ]
+  ],
+  "training_accuracy": 1.0,
+  "training_auc": 1.0,
+  "complete_separation": true,
+  "minimum_signed_margin": 7.003864336827819,
+  "n_iter": 14,
+  "information_rank": 11,
+  "information_condition": 278.8197778761611,
+  "p_value_status": "Conventional MLE p-values unavailable under complete separation"
+}
