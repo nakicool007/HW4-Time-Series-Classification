@@ -1,0 +1,51 @@
+{
+  "seed": 42,
+  "l": 1,
+  "p": 10,
+  "sample_counts_other_bending": [
+    9,
+    9
+  ],
+  "target_prior": 0.13043478260869565,
+  "sample_prior": 0.5,
+  "intercept_adjustment": -1.8971199848858813,
+  "sample_standardized_intercept": 0.7635157476620471,
+  "adjusted_standardized_intercept": -1.1336042372238342,
+  "threshold": 0.5,
+  "class_order": [
+    "other activities",
+    "bending"
+  ],
+  "training": {
+    "instances": 69,
+    "confusion_matrix": [
+      [
+        56,
+        4
+      ],
+      [
+        0,
+        9
+      ]
+    ],
+    "accuracy": 0.9420289855072463,
+    "balanced_accuracy": 0.9666666666666667,
+    "auc": 1.0
+  },
+  "test": {
+    "instances": 19,
+    "confusion_matrix": [
+      [
+        14,
+        1
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "accuracy": 0.9473684210526315,
+    "balanced_accuracy": 0.9666666666666667,
+    "auc": 1.0
+  }
+}

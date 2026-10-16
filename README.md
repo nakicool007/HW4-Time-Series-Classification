@@ -3,7 +3,7 @@
 **Name:** Nakul Kumbria  
 **GitHub:** nakicool007
 
-I used the AReM dataset to study time series classification. The notebook includes the feature extraction from Question 1 and my work on Question 2(a)(i) through (vi), comparing bending with the other activities.
+I used the AReM dataset to study time series classification. The notebook includes the feature extraction from Question 1 and my work on Question 2(a)(i) through (vii), comparing bending with the other activities.
 
 ## Current work
 
@@ -15,12 +15,15 @@ I used the AReM dataset to study time series classification. The notebook includ
 - Report the selected model's training confusion matrix, ROC, AUC, coefficients, and p-value limitations under complete separation.
 - Evaluate the same classifier on the 19 test instances and compare the test accuracy with cross-validation.
 - Explain how complete separation affects the unregularized coefficients and p-values.
+- Fit a balanced case-control sample and correct its intercept for the original training class proportion, then report its training and test confusion matrices, ROC, and AUC.
 
 For Question 2(a)(iii), I compared all 8,820 pairs of segment and feature counts using mean balanced accuracy. The selected pair is **(l, p) = (1, 10)**, with 99.17% mean CV balanced accuracy and 98.57% mean CV ordinary accuracy. These are model-selection scores; the 19 test instances were kept out of the search.
 
 For Question 2(a)(iv), the selected model correctly classifies all 60 other-activity and 9 bending training instances, with training AUC 1.00. The training classes are completely separable. I report the stopped-fit coefficients and numerical Wald diagnostics, but conventional MLE p-values are unavailable in this case. These training results are not a test-set evaluation.
 
 For Question 2(a)(v), the model correctly classifies all **19 test instances (100% accuracy)**, compared with 98.57% mean CV accuracy. I used the chosen l=1 and the same feature order, RFE mask, training-fitted scaler, model, and 0.5 cutoff. No model fitting or feature selection was done on the test set.
+
+For Question 2(a)(vii), I sampled 9 controls without replacement and kept all 9 bending cases (seed 42). I fitted a new unregularized model with the same 10 features and adjusted the intercept by log(9/60), approximately -1.8971. The adjusted model has 94.20% training accuracy, 94.74% test accuracy, and AUC 1.00 on both sets. It has 4 training false positives and 1 test false positive, with no false negatives. The correction uses the original training class proportion, not the test labels.
 
 ## Files
 
