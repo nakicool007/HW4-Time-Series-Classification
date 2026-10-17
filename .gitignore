@@ -20,7 +20,6 @@ Desktop.ini
 
 # Keep the assignment notebook, source data, splits, and result CSVs tracked.
 
-# Archived Git metadata from the copied homework folder
-.git-hw3-backup/
+# Local repository setup metadata
 .github-repository-state.json
 setup_hw4_repository.py

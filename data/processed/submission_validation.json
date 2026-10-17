@@ -68,10 +68,6 @@
       "handling": "Original observations retained; no padding or fabricated rows."
     }
   ],
-  "hw3_resubmitted_notebook": "notebook/Kumbria_Nakul_HW3.ipynb",
-  "hw3_source_commit": "d08d9f2a999cbc363d5dd13b84ea7146c8b05e24",
-  "hw3_notebook_matches_submitted_commit_bytes": true,
-  "hw3_notebook_sha256": "771fdfcd80e98ca4a84e7e02ae893535fc8434e3a1518a1bc7115221eeb3a54a",
   "hw3_feature_creation_code_included_in_hw4": true,
   "feature_matrix_shape": [
     88,

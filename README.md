@@ -45,7 +45,7 @@ For ISLR Exercise 4.8.7, I used the class priors and normal densities in Bayes' 
 
 ## Submission layout
 
-I kept the general layout from the example, using the AReM activity folders required by the assignment. I included the original HW3 notebook again because HW4 uses its feature-creation code. The HW4 notebook also contains those feature-extraction steps and can run on its own.
+I kept the general layout from the example, using the AReM activity folders required by the assignment. The HW4 notebook contains the feature-creation code from HW3 and can run on its own.
 
 ```text
 HW4-Time-Series-Classification/
@@ -68,16 +68,12 @@ HW4-Time-Series-Classification/
 |   |-- processed/   # extracted features and saved results
 |   `-- figures/     # saved plots
 `-- notebook/
-    |-- Kumbria_Nakul_HW3.ipynb
     `-- Kumbria_Nakul_HW4.ipynb
 ```
-
-The HW3 notebook is an exact copy from the submitted commit [d08d9f2](https://github.com/nakicool007/HW3/commit/d08d9f2a999cbc363d5dd13b84ea7146c8b05e24). It is included in this HW4 repository without changing the HW3 repository.
 
 ## Files
 
 - `notebook/Kumbria_Nakul_HW4.ipynb`: HW4 code, saved plots, and written answers, including the feature-creation code.
-- `notebook/Kumbria_Nakul_HW3.ipynb`: an unchanged copy of the submitted HW3 notebook, included again as required.
 - `data/AReM/`: original dataset.
 - `data/train/` and `data/test/`: activity folders containing the assignment's training and test splits.
 - `data/processed/`: extracted features, instance metadata, bootstrap results, training features from the two halves, RFE results, training and test predictions, and the coefficient report.
@@ -86,7 +82,7 @@ The HW3 notebook is an exact copy from the submitted commit [d08d9f2](https://gi
 
 ## Submission checks
 
-I checked that the seven activity folders contain all 88 instances, that the specified test files give a 69/19 train/test split, and that every split file matches its original. I also verified that the resubmitted HW3 notebook matches the submitted commit byte for byte and that the HW4 notebook includes its feature-creation code. The notebook code cells compile and the local plot links resolve. The results are saved in [`data/processed/submission_validation.json`](data/processed/submission_validation.json).
+I checked that the seven activity folders contain all 88 instances, that the specified test files give a 69/19 train/test split, and that every split file matches its original. I also verified that the HW4 notebook includes the feature-creation code from HW3. The notebook code cells compile and the local plot links resolve. The results are saved in [`data/processed/submission_validation.json`](data/processed/submission_validation.json).
 
 The one data exception is the original `sitting/dataset8.csv`, which has 479 observations. I kept those observations and documented the exception rather than adding a made-up row.
 
