@@ -3,7 +3,7 @@
 **Name:** Nakul Kumbria  
 **GitHub:** nakicool007
 
-I used the AReM dataset to study time series classification. The notebook includes feature extraction from Question 1, binary classification in Question 2(a) and (b), and multiclass classification in Question 2(c)(i) through (iii). It also includes the derivation for ISLR Exercise 4.8.3 on why QDA is quadratic.
+I used the AReM dataset to study time series classification. The notebook includes feature extraction from Question 1, binary classification in Question 2(a) and (b), and multiclass classification in Question 2(c)(i) through (iii). It also includes ISLR Exercises 4.8.3 on why QDA is quadratic and 4.8.7 on using Bayes' theorem to predict a dividend.
 
 ## Current work
 
@@ -40,6 +40,8 @@ For Question 2(c)(ii), Gaussian NB selected **l=1, var_smoothing=0.1** and made 
 For Question 2(c)(iii), I chose Gaussian NB based on its highest CV balanced accuracy (90.48%) and lowest observed test error (5.26%). The notebook also notes that L1 logistic regression had slightly higher ordinary CV accuracy and that the test set is small.
 
 For ISLR Exercise 4.8.3, I derived the Bayes discriminant for a one-dimensional Gaussian model with class-specific variances. The class-dependent coefficient of x squared remains when comparing classes, giving a quadratic rule. Equal variances give the linear special case.
+
+For ISLR Exercise 4.8.7, I used the class priors and normal densities in Bayes' theorem to calculate a **75.19% probability** of issuing a dividend when last year's profit was X=4.
 
 ## Files
 
