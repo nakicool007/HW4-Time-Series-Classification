@@ -3,7 +3,7 @@
 **Name:** Nakul Kumbria  
 **GitHub:** nakicool007
 
-I used the AReM dataset to study time series classification. The notebook includes feature extraction from Question 1, binary classification in Question 2(a) and (b), and multiclass classification in Question 2(c)(i) through (iii).
+I used the AReM dataset to study time series classification. The notebook includes feature extraction from Question 1, binary classification in Question 2(a) and (b), and multiclass classification in Question 2(c)(i) through (iii). It also includes the derivation for ISLR Exercise 4.8.3 on why QDA is quadratic.
 
 ## Current work
 
@@ -38,6 +38,8 @@ For Question 2(c)(i), I fitted a joint multinomial L1 model for all seven activi
 For Question 2(c)(ii), Gaussian NB selected **l=1, var_smoothing=0.1** and made **1/19 test errors (5.26%)**, with macro AUC 1.0000 and micro AUC 0.9995. Multinomial NB selected **l=10, alpha=0.1** and made **5/19 test errors (26.32%)**, with macro AUC 0.9708 and micro AUC 0.9741. Both use empirical training class priors. Gaussian NB uses fold-specific standardization, while Multinomial NB uses nonnegative MaxAbs scaling. The 560 parameter pairs were chosen using stratified 4-fold CV, without using test scores for tuning.
 
 For Question 2(c)(iii), I chose Gaussian NB based on its highest CV balanced accuracy (90.48%) and lowest observed test error (5.26%). The notebook also notes that L1 logistic regression had slightly higher ordinary CV accuracy and that the test set is small.
+
+For ISLR Exercise 4.8.3, I derived the Bayes discriminant for a one-dimensional Gaussian model with class-specific variances. The class-dependent coefficient of x squared remains when comparing classes, giving a quadratic rule. Equal variances give the linear special case.
 
 ## Files
 
