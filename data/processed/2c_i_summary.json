@@ -1,0 +1,177 @@
+{
+  "best_l": 2,
+  "best_C": 316.22776601683796,
+  "C_grid": [
+    0.0001,
+    0.00031622776601683794,
+    0.001,
+    0.0031622776601683794,
+    0.01,
+    0.03162277660168379,
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0,
+    31.622776601683793,
+    100.0,
+    316.22776601683796,
+    1000.0,
+    3162.2776601683795,
+    10000.0
+  ],
+  "cv_folds": 4,
+  "cv_scoring": "balanced_accuracy",
+  "candidate_pairs": 340,
+  "mean_cv_accuracy": 0.9272875816993464,
+  "mean_cv_balanced_accuracy": 0.8690476190476191,
+  "fold_accuracy": [
+    0.9444444444444444,
+    0.9411764705882353,
+    0.8823529411764706,
+    0.9411764705882353
+  ],
+  "fold_balanced_accuracy": [
+    0.8571428571428571,
+    0.9523809523809524,
+    0.7142857142857143,
+    0.9523809523809524
+  ],
+  "classes": [
+    "bending1",
+    "bending2",
+    "cycling",
+    "lying",
+    "sitting",
+    "standing",
+    "walking"
+  ],
+  "training_class_counts": [
+    5,
+    4,
+    12,
+    12,
+    12,
+    12,
+    12
+  ],
+  "test_accuracy": 0.8421052631578947,
+  "test_error": 0.1578947368421053,
+  "test_errors": 3,
+  "test_balanced_accuracy": 0.8333333333333334,
+  "test_instances": 19,
+  "test_confusion_matrix": [
+    [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3
+    ]
+  ],
+  "class_auc": [
+    {
+      "activity": "bending1",
+      "test_support": 2,
+      "ovr_auc": 1.0
+    },
+    {
+      "activity": "bending2",
+      "test_support": 2,
+      "ovr_auc": 0.7941176470588236
+    },
+    {
+      "activity": "cycling",
+      "test_support": 3,
+      "ovr_auc": 1.0
+    },
+    {
+      "activity": "lying",
+      "test_support": 3,
+      "ovr_auc": 1.0
+    },
+    {
+      "activity": "sitting",
+      "test_support": 3,
+      "ovr_auc": 0.8958333333333334
+    },
+    {
+      "activity": "standing",
+      "test_support": 3,
+      "ovr_auc": 1.0
+    },
+    {
+      "activity": "walking",
+      "test_support": 3,
+      "ovr_auc": 1.0
+    }
+  ],
+  "macro_ovr_auc": 0.9557072829131652,
+  "micro_ovr_auc": 0.9718374884579871,
+  "features_with_any_nonzero_coefficient": 83,
+  "nonzero_class_coefficients": 503,
+  "candidate_features": 84,
+  "solver": "saga",
+  "l1_ratio": 1,
+  "max_iter": 50000,
+  "tol": 0.0001,
+  "n_iter": 1414,
+  "seed": 42,
+  "all_cv_fits_converged": true
+}

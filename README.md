@@ -3,7 +3,7 @@
 **Name:** Nakul Kumbria  
 **GitHub:** nakicool007
 
-I used the AReM dataset to study time series classification. The notebook includes the feature extraction from Question 1 and my work on Question 2(a)(i) through (vii) and Question 2(b)(i) and (ii), comparing bending with the other activities.
+I used the AReM dataset to study time series classification. The notebook includes feature extraction from Question 1, binary classification in Question 2(a) and (b), and multiclass classification in Question 2(c)(i).
 
 ## Current work
 
@@ -18,6 +18,7 @@ I used the AReM dataset to study time series classification. The notebook includ
 - Fit a balanced case-control sample and correct its intercept for the original training class proportion, then report its training and test confusion matrices, ROC, and AUC.
 - Jointly tune segmentation and L1 regularization using stratified 5-fold cross-validation, with scaling and feature selection inside the folds.
 - Compare the L1 model with the unregularized RFE model and discuss the limitations of p-value selection under complete separation.
+- Tune an L1-penalized multinomial model for all seven activities and report test error, the multiclass confusion matrix, and one-vs-rest ROC curves.
 
 For Question 2(a)(iii), I compared all 8,820 pairs of segment and feature counts using mean balanced accuracy. The selected pair is **(l, p) = (1, 10)**, with 99.17% mean CV balanced accuracy and 98.57% mean CV ordinary accuracy. These are model-selection scores; the 19 test instances were kept out of the search.
 
@@ -31,13 +32,15 @@ For Question 2(b)(i), I used standardized features and the recommended Liblinear
 
 For Question 2(b)(ii), the selected L1 model correctly classifies 18 of 19 test instances (94.74%), compared with 19 of 19 for the unregularized RFE model. Both have 98.57% mean CV accuracy, while RFE has higher CV balanced accuracy. The notebook explains that this is an empirical comparison with RFE, not valid p-value pruning, and discusses why L1 is simpler to implement here.
 
+For Question 2(c)(i), I fitted a joint multinomial L1 model for all seven activities using SAGA and fold-specific standardization. I used stratified 4-fold CV because bending2 has only 4 training instances. The selected pair is **l=2, C=316.228**, with 92.73% mean CV accuracy and 86.90% mean CV balanced accuracy. The model made **3 errors out of 19 test instances (15.79% test error)**. The notebook includes the 7-by-7 test confusion matrix, per-class one-vs-rest ROC curves, macro AUC 0.9557, and micro AUC 0.9718.
+
 ## Files
 
 - `notebook/Kumbria_Nakul_HW4.ipynb`: code, saved plots, and written answers.
 - `data/AReM/`: original dataset.
 - `data/train/` and `data/test/`: activity folders containing the assignment's training and test splits.
 - `data/processed/`: extracted features, instance metadata, bootstrap results, training features from the two halves, RFE results, training and test predictions, and the coefficient report.
-- `figures/`: saved scatterplot matrices, the cross-validation model-selection plot, and the training confusion matrix and ROC for Question 2(a).
+- `figures/`: scatterplot matrices, model-selection plots, confusion matrices, and ROC curves for the binary and multiclass models.
 - `requirements.txt`: Python dependencies.
 
 ## Dataset and split
