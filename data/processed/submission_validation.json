@@ -1,0 +1,84 @@
+{
+  "status": "passed_with_documented_original_data_exception",
+  "submission_root_entries": [
+    "README.md",
+    ".gitignore",
+    "requirements.txt",
+    "data/",
+    "notebook/"
+  ],
+  "dataset": "AReM",
+  "activity_folders": [
+    "bending1",
+    "bending2",
+    "cycling",
+    "lying",
+    "sitting",
+    "standing",
+    "walking"
+  ],
+  "activity_counts": {
+    "bending1": {
+      "total": 7,
+      "train": 5,
+      "test": 2
+    },
+    "bending2": {
+      "total": 6,
+      "train": 4,
+      "test": 2
+    },
+    "cycling": {
+      "total": 15,
+      "train": 12,
+      "test": 3
+    },
+    "lying": {
+      "total": 15,
+      "train": 12,
+      "test": 3
+    },
+    "sitting": {
+      "total": 15,
+      "train": 12,
+      "test": 3
+    },
+    "standing": {
+      "total": 15,
+      "train": 12,
+      "test": 3
+    },
+    "walking": {
+      "total": 15,
+      "train": 12,
+      "test": 3
+    }
+  },
+  "instances": 88,
+  "sensor_series_per_instance": 6,
+  "train_instances": 69,
+  "test_instances": 19,
+  "split_copies_match_original_bytes": true,
+  "train_test_disjoint": true,
+  "instances_with_480_observations": 87,
+  "original_data_exceptions": [
+    {
+      "file": "sitting/dataset8.csv",
+      "observations": 479,
+      "handling": "Original observations retained; no padding or fabricated rows."
+    }
+  ],
+  "hw3_resubmitted_notebook": "notebook/Kumbria_Nakul_HW3.ipynb",
+  "hw3_source_commit": "d08d9f2a999cbc363d5dd13b84ea7146c8b05e24",
+  "hw3_notebook_matches_submitted_commit_bytes": true,
+  "hw3_notebook_sha256": "771fdfcd80e98ca4a84e7e02ae893535fc8434e3a1518a1bc7115221eeb3a54a",
+  "hw3_feature_creation_code_included_in_hw4": true,
+  "feature_matrix_shape": [
+    88,
+    42
+  ],
+  "all_notebook_code_cells_compile": true,
+  "relative_notebook_links_resolve": true,
+  "figure_directory": "data/figures/",
+  "figure_files": 13
+}

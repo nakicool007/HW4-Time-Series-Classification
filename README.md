@@ -43,14 +43,52 @@ For ISLR Exercise 4.8.3, I derived the Bayes discriminant for a one-dimensional 
 
 For ISLR Exercise 4.8.7, I used the class priors and normal densities in Bayes' theorem to calculate a **75.19% probability** of issuing a dividend when last year's profit was X=4.
 
+## Submission layout
+
+I kept the general layout from the example, using the AReM activity folders required by the assignment. I included the original HW3 notebook again because HW4 uses its feature-creation code. The HW4 notebook also contains those feature-extraction steps and can run on its own.
+
+```text
+HW4-Time-Series-Classification/
+|-- README.md
+|-- .gitignore
+|-- requirements.txt
+|-- data/
+|   |-- AReM/
+|   |   |-- bending1/
+|   |   |-- bending2/
+|   |   |-- cycling/
+|   |   |-- lying/
+|   |   |-- sitting/
+|   |   |-- standing/
+|   |   |-- walking/
+|   |   |-- bendingType.pdf
+|   |   `-- sensorsPlacement.pdf
+|   |-- train/       # same seven activity folders; 69 CSV files
+|   |-- test/        # same seven activity folders; 19 CSV files
+|   |-- processed/   # extracted features and saved results
+|   `-- figures/     # saved plots
+`-- notebook/
+    |-- Kumbria_Nakul_HW3.ipynb
+    `-- Kumbria_Nakul_HW4.ipynb
+```
+
+The HW3 notebook is an exact copy from the submitted commit [d08d9f2](https://github.com/nakicool007/HW3/commit/d08d9f2a999cbc363d5dd13b84ea7146c8b05e24). It is included in this HW4 repository without changing the HW3 repository.
+
 ## Files
 
-- `notebook/Kumbria_Nakul_HW4.ipynb`: code, saved plots, and written answers.
+- `notebook/Kumbria_Nakul_HW4.ipynb`: HW4 code, saved plots, and written answers, including the feature-creation code.
+- `notebook/Kumbria_Nakul_HW3.ipynb`: an unchanged copy of the submitted HW3 notebook, included again as required.
 - `data/AReM/`: original dataset.
 - `data/train/` and `data/test/`: activity folders containing the assignment's training and test splits.
 - `data/processed/`: extracted features, instance metadata, bootstrap results, training features from the two halves, RFE results, training and test predictions, and the coefficient report.
-- `figures/`: scatterplot matrices, model-selection plots, confusion matrices, and ROC curves for the binary and multiclass models.
+- `data/figures/`: scatterplot matrices, model-selection plots, confusion matrices, and ROC curves for the binary and multiclass models.
 - `requirements.txt`: Python dependencies.
+
+## Submission checks
+
+I checked that the seven activity folders contain all 88 instances, that the specified test files give a 69/19 train/test split, and that every split file matches its original. I also verified that the resubmitted HW3 notebook matches the submitted commit byte for byte and that the HW4 notebook includes its feature-creation code. The notebook code cells compile and the local plot links resolve. The results are saved in [`data/processed/submission_validation.json`](data/processed/submission_validation.json).
+
+The one data exception is the original `sitting/dataset8.csv`, which has 479 observations. I kept those observations and documented the exception rather than adding a made-up row.
 
 ## Dataset and split
 
@@ -58,7 +96,7 @@ There are 88 instances across seven activities. I used datasets 1 and 2 from ben
 
 For the binary plots, I grouped bending1 and bending2 together, giving 9 bending and 60 other training instances. The plots do not use the test instances.
 
-Most instances have 480 observations. `sitting/dataset8.csv` has 479, so I kept the original observations. When splitting this instance, I used 239 observations in the first half and 240 in the second half.
+Most instances have 480 observations. `sitting/dataset8.csv` has 479, so I kept the original observations. For part 2(a)(ii), I used 239 observations in the first half and 240 in the second half of this instance.
 
 ## Running the notebook
 
