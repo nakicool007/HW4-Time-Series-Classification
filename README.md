@@ -3,7 +3,7 @@
 **Name:** Nakul Kumbria  
 **GitHub:** nakicool007
 
-I used the AReM dataset to study time series classification. The notebook includes feature extraction from Question 1, binary classification in Question 2(a) and (b), and multiclass classification in Question 2(c)(i) and (ii).
+I used the AReM dataset to study time series classification. The notebook includes feature extraction from Question 1, binary classification in Question 2(a) and (b), and multiclass classification in Question 2(c)(i) through (iii).
 
 ## Current work
 
@@ -36,6 +36,8 @@ For Question 2(b)(ii), the selected L1 model correctly classifies 18 of 19 test 
 For Question 2(c)(i), I fitted a joint multinomial L1 model for all seven activities using SAGA and fold-specific standardization. I used stratified 4-fold CV because bending2 has only 4 training instances. The selected pair is **l=2, C=316.228**, with 92.73% mean CV accuracy and 86.90% mean CV balanced accuracy. The model made **3 errors out of 19 test instances (15.79% test error)**. The notebook includes the 7-by-7 test confusion matrix, per-class one-vs-rest ROC curves, macro AUC 0.9557, and micro AUC 0.9718.
 
 For Question 2(c)(ii), Gaussian NB selected **l=1, var_smoothing=0.1** and made **1/19 test errors (5.26%)**, with macro AUC 1.0000 and micro AUC 0.9995. Multinomial NB selected **l=10, alpha=0.1** and made **5/19 test errors (26.32%)**, with macro AUC 0.9708 and micro AUC 0.9741. Both use empirical training class priors. Gaussian NB uses fold-specific standardization, while Multinomial NB uses nonnegative MaxAbs scaling. The 560 parameter pairs were chosen using stratified 4-fold CV, without using test scores for tuning.
+
+For Question 2(c)(iii), I chose Gaussian NB based on its highest CV balanced accuracy (90.48%) and lowest observed test error (5.26%). The notebook also notes that L1 logistic regression had slightly higher ordinary CV accuracy and that the test set is small.
 
 ## Files
 
