@@ -1,0 +1,15 @@
+model,activity,class_prior
+Gaussian NB,bending1,0.07246376811594203
+Gaussian NB,bending2,0.057971014492753624
+Gaussian NB,cycling,0.17391304347826086
+Gaussian NB,lying,0.17391304347826086
+Gaussian NB,sitting,0.17391304347826086
+Gaussian NB,standing,0.17391304347826086
+Gaussian NB,walking,0.17391304347826086
+Multinomial NB,bending1,0.07246376811594202
+Multinomial NB,bending2,0.05797101449275362
+Multinomial NB,cycling,0.17391304347826084
+Multinomial NB,lying,0.17391304347826084
+Multinomial NB,sitting,0.17391304347826084
+Multinomial NB,standing,0.17391304347826084
+Multinomial NB,walking,0.17391304347826084

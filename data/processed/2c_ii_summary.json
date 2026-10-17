@@ -1,0 +1,212 @@
+{
+  "classes": [
+    "bending1",
+    "bending2",
+    "cycling",
+    "lying",
+    "sitting",
+    "standing",
+    "walking"
+  ],
+  "cv_folds": 4,
+  "seed": 42,
+  "cv_scoring": "balanced_accuracy",
+  "candidate_pairs": 560,
+  "fold_fits": 2240,
+  "models": {
+    "Gaussian NB": {
+      "model": "Gaussian NB",
+      "l": 1,
+      "parameter": "var_smoothing",
+      "parameter_value": 0.1,
+      "mean_cv_balanced_accuracy": 0.9047619047619048,
+      "mean_cv_accuracy": 0.911764705882353,
+      "fold_1_balanced_accuracy": 1.0,
+      "fold_1_accuracy": 1.0,
+      "fold_2_balanced_accuracy": 0.8571428571428571,
+      "fold_2_accuracy": 0.8235294117647058,
+      "fold_3_balanced_accuracy": 0.8095238095238094,
+      "fold_3_accuracy": 0.8823529411764706,
+      "fold_4_balanced_accuracy": 0.9523809523809524,
+      "fold_4_accuracy": 0.9411764705882353,
+      "test_errors": 1,
+      "test_error": 0.052631578947368474,
+      "test_accuracy": 0.9473684210526315,
+      "test_balanced_accuracy": 0.9523809523809524,
+      "test_confusion_matrix": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "macro_ovr_auc": 1.0,
+      "micro_ovr_auc": 0.9995383194829178,
+      "class_ovr_auc": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "Multinomial NB": {
+      "model": "Multinomial NB",
+      "l": 10,
+      "parameter": "alpha",
+      "parameter_value": 0.1,
+      "mean_cv_balanced_accuracy": 0.7916666666666666,
+      "mean_cv_accuracy": 0.8406862745098038,
+      "fold_1_balanced_accuracy": 0.738095238095238,
+      "fold_1_accuracy": 0.8333333333333334,
+      "fold_2_balanced_accuracy": 0.8571428571428573,
+      "fold_2_accuracy": 0.8235294117647058,
+      "fold_3_balanced_accuracy": 0.8095238095238094,
+      "fold_3_accuracy": 0.8823529411764706,
+      "fold_4_balanced_accuracy": 0.7619047619047619,
+      "fold_4_accuracy": 0.8235294117647058,
+      "test_errors": 5,
+      "test_error": 0.26315789473684215,
+      "test_accuracy": 0.7368421052631579,
+      "test_balanced_accuracy": 0.7142857142857143,
+      "test_confusion_matrix": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "macro_ovr_auc": 0.9707633053221288,
+      "micro_ovr_auc": 0.974145891043398,
+      "class_ovr_auc": [
+        1.0,
+        0.9411764705882353,
+        1.0,
+        1.0,
+        0.9583333333333334,
+        0.8958333333333334,
+        1.0
+      ]
+    }
+  },
+  "roc_scores": "log posterior probabilities",
+  "priors": "empirical training class frequencies"
+}
